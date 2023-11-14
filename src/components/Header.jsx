@@ -2,14 +2,13 @@ import React from "react";
 import { HStack, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo2.png";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 const Header = () => {
   const hoverEffect = {
-    bgColor: "whitesmoke",
-    color: "black",
-    borderRadius: "10px",
+    color: "white",
+    borderRadius: "3px",
     transition: ".2s",
+    borderTop: "2px solid white",
   };
   return (
     <HStack
@@ -23,27 +22,51 @@ const Header = () => {
       bgColor={"#37C38B"}
       textAlign={"start"}
     >
-      <Link to={'/'}>
+      <Link to={"/"}>
         <Image src={Logo} w={"56"} />
       </Link>
-      <HStack gap={"12"} fontWeight={"bold"}>
+      <HStack gap={['','','8',"20"]} fontWeight={"bold"} display={["none", "flex"]}>
         <Link to={"/"}>
-          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+          <Text
+            _hover={hoverEffect}
+            fontSize={["none", "", "1rem", "1.1rem"]}
+            color={"black"}
+            letterSpacing={"1px"}
+            py={"2"}
+          >
             Home
           </Text>
         </Link>
         <Link to={"/coins"}>
-          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+          <Text
+            _hover={hoverEffect}
+            fontSize={["none", "", "1rem", "1.1rem"]}
+            color={"black"}
+            py={"2"}
+            letterSpacing={"1px"}
+          >
             Coins
           </Text>
         </Link>
         <Link to={"/exchanges"}>
-          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+          <Text
+            _hover={hoverEffect}
+            fontSize={["none", "", "1rem", "1.1rem"]}
+            color={"black"}
+            py={"2"}
+            letterSpacing={"1px"}
+          >
             Exchanges
           </Text>
         </Link>
         <Link to={"/coin/:id"}>
-          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+          <Text
+            _hover={hoverEffect}
+            fontSize={["none", "", "1rem", "1.1rem"]}
+            color={"black"}
+            py={"2"}
+            letterSpacing={"1px"}
+          >
             Coins Details
           </Text>
         </Link>

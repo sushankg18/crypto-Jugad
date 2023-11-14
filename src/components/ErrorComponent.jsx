@@ -1,4 +1,4 @@
-import { Box, Heading, flexbox } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 
 const ErrorComponent = ({ message }) => {
