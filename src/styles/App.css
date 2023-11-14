@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.coins-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+    padding: 1rem;
+    justify-content: center;
+}
+.loader-div{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
