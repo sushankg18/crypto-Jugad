@@ -5,12 +5,12 @@ import Logo from "../assets/Logo2.png";
 import { hover } from "@testing-library/user-event/dist/hover";
 
 const Header = () => {
-  const hoverEffect ={
+  const hoverEffect = {
     bgColor: "whitesmoke",
-    color : "black",
-    borderRadius : "10px",
-    transition : ".2s"
-  }
+    color: "black",
+    borderRadius: "10px",
+    transition: ".2s",
+  };
   return (
     <HStack
       h={"16"}
@@ -23,19 +23,29 @@ const Header = () => {
       bgColor={"#37C38B"}
       textAlign={"start"}
     >
-      <Image src={Logo} w={"56"} />
+      <Link to={'/'}>
+        <Image src={Logo} w={"56"} />
+      </Link>
       <HStack gap={"12"} fontWeight={"bold"}>
         <Link to={"/"}>
-          <Text _hover={hoverEffect}  py={'2'} px={'4'}>Home</Text>
+          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+            Home
+          </Text>
         </Link>
         <Link to={"/coins"}>
-          <Text _hover={hoverEffect} py={'2'} px={'4'}>Coins</Text>
+          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+            Coins
+          </Text>
         </Link>
         <Link to={"/exchanges"}>
-          <Text _hover={hoverEffect} py={'2'} px={'4'}>Exchanges</Text>
+          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+            Exchanges
+          </Text>
         </Link>
         <Link to={"/coin/:id"}>
-          <Text _hover={hoverEffect} py={'2'} px={'4'}>Coins Details</Text>
+          <Text _hover={hoverEffect} py={"2"} px={"4"}>
+            Coins Details
+          </Text>
         </Link>
       </HStack>
     </HStack>
