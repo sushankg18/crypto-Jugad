@@ -7,7 +7,7 @@ const Header = () => {
   const hoverEffect = {
     color: "white",
     transition: ".2s",
-    border: "1px solid white",
+    borderTop: "1px solid white",
   };
   return (
     <HStack
@@ -22,18 +22,22 @@ const Header = () => {
       textAlign={"start"}
     >
       <Link to={"/"}>
-        <Image src={Logo} w={"48"} borderRadius={'5px'} />
+        <Image src={Logo} w={"48"} borderRadius={"5px"} />
       </Link>
-      <HStack gap={['','','8',"20"]} fontWeight={"bold"} display={["none", "flex"]}>
+      <HStack
+        gap={["", "", "8", "20"]}
+        fontWeight={"bold"}
+        display={["none", "flex"]}
+      >
         <Link to={"/"}>
           <Text
             _hover={hoverEffect}
-            fontSize={["none", "", "1rem", "1.1rem"]}
+            fontSize={["none", ".8rem", "1rem", "1.2rem"]}
             color={"#fff"}
-            borderRadius={'10px'}
+            fontWeight={"semibold"}
             letterSpacing={"1px"}
             py={"2"}
-            px={'4'}
+            px={"4"}
           >
             Home
           </Text>
@@ -41,11 +45,11 @@ const Header = () => {
         <Link to={"/coins"}>
           <Text
             _hover={hoverEffect}
-            fontSize={["none", "", "1rem", "1.1rem"]}
+            fontSize={["none", ".8rem", "1rem", "1.2rem"]}
             color={"fff"}
-            px={'4'}
-            borderRadius={'10px'}
+            px={"4"}
             py={"2"}
+            fontWeight={"semibold"}
             letterSpacing={"1px"}
           >
             Coins
@@ -54,18 +58,17 @@ const Header = () => {
         <Link to={"/exchanges"}>
           <Text
             _hover={hoverEffect}
-            fontSize={["none", "", "1rem", "1.1rem"]}
-            borderRadius={'10px'}
+            fontWeight={"semibold"}
+            fontSize={["none", ".8rem", "1rem", "1.2rem"]}
             color={"fff"}
             py={"2"}
-            objectFit={'contain'}
-            px={'4'}
+            objectFit={"contain"}
+            px={"4"}
             letterSpacing={"1px"}
           >
             Exchanges
           </Text>
         </Link>
-       
       </HStack>
     </HStack>
   );

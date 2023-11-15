@@ -3,7 +3,7 @@ import React from "react";
 
 const ExchangeCard = ({ name, image, market_cap_rank,url }) => {
   return (
-    <a href={url} target="blank">
+    <a href={url} target="_blank" rel="noreferrer">
       <VStack
         bgColor={"whitesmoke"}
         borderRadius={"8"}

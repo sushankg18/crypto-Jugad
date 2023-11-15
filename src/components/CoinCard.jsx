@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CoinCard = ({ id, name, image, currentPrice, symbol }) => {
   return (
-    <Link to={`/coin/${id}`} target="blank">
+    <Link to={`/coin/${id}`} target="_blank" rel="noreferrer">
       <VStack
         bgColor={"whitesmoke"}
         borderRadius={"8"}
