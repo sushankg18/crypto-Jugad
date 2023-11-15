@@ -1,15 +1,37 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.coins-div{
+
+.coins-div {
     padding: 1rem;
 }
-.loader-div{
+
+.loader-div {
     width: 100vw;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.buttons-div::-webkit-scrollbar {
+    width: 10px;
+}
+
+.buttons-div::-webkit-scrollbar-track {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Handle */
+.buttons-div::-webkit-scrollbar-thumb {
+    background:dimgray;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+.buttons-div::-webkit-scrollbar-thumb:hover {
+    background: rgb(84, 83, 83);
 }

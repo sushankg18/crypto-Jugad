@@ -3,7 +3,14 @@ import axios from "axios";
 import Loader from "./Loader.jsx";
 import CoinCard from "./CoinCard.jsx";
 import ErrorComponent from "./ErrorComponent.jsx";
-import { Button, HStack, VStack, Center } from "@chakra-ui/react";
+import {
+  Button,
+  HStack,
+  VStack,
+  Center,
+  RadioGroup,
+  Radio,
+} from "@chakra-ui/react";
 
 const Coins = () => {
   const [Coins, setCoins] = useState([]);
@@ -43,13 +50,14 @@ const Coins = () => {
 
   return (
     <Center>
-      <VStack w={["full","70vw"]} py={'6'} gap={"10"}>
+      <VStack w={["full", "70vw"]} py={"6"} gap={"10"}>
         <HStack flexWrap={"wrap"} justifyContent={"center"} gap={"10"}>
           {loading ? (
             <Loader />
           ) : (
             Coins.map((i) => (
               <CoinCard
+                id={i.id}
                 image={i.image}
                 name={i.id}
                 currentPrice={i.current_price}
@@ -58,9 +66,15 @@ const Coins = () => {
             ))
           )}
         </HStack>
-        <HStack overflowX={"auto"} w={"full"}>
+        <HStack
+          overflowX={"auto"}
+          w={"full"}
+          className="buttons-div"
+          padding={"5px"}
+        >
           {btns.map((item, index) => (
             <Button
+              key={index}
               bgColor={"black"}
               color={"white"}
               onClick={() => changePage(index + 1)}

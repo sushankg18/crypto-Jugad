@@ -5,9 +5,9 @@ const Loader = () => {
   return (
     <div className="loader-div">
       <Spinner
-        w={'30vh'}
-        h={'30vh'}
-        color="black"
+        w={['15vh','30vh']}
+        h={['15vh','30vh']}
+        color="#37C38B"
         motion={{
           rotate: [0, 360],
         }}

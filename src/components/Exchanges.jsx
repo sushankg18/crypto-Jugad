@@ -3,20 +3,20 @@ import axios from "axios";
 import Loader from "./Loader.jsx";
 import ExchangeCard from "./ExchangeCard.jsx";
 import ErrorComponent from "./ErrorComponent.jsx";
-import { Box, Center, HStack, VStack } from "@chakra-ui/react";
+import {   Center, HStack, VStack } from "@chakra-ui/react";
 const Exchanges = () => {
   const [exchanges, setExchanges] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
+   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&per_page=200"
+          "https://api.coingecko.com/api/v3/exchanges"
         );
         setExchanges(data);
-        setLoading(false);
+        setLoading(false);  
       } catch (error) {
         setError(true);
         setLoading(false);
@@ -28,7 +28,7 @@ const Exchanges = () => {
   if (error)
     return (
       <ErrorComponent
-        message={"Error while fetching Exchanges. Please try again Later"}
+        message={"Error while fetching Exchanges. Please try again Later !"}
       />
     );
 
@@ -43,7 +43,8 @@ const Exchanges = () => {
               <ExchangeCard
                 image={i.image}
                 name={i.id}
-                market_cap_rank={i.market_cap_rank}
+                market_cap_rank={i.trust_score_rank}
+                url={i.url}
               />
             ))
           )}

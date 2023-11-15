@@ -30,7 +30,7 @@ const Header = () => {
           <Text
             _hover={hoverEffect}
             fontSize={["none", "", "1rem", "1.1rem"]}
-            color={"black"}
+            color={"#005827"}
             letterSpacing={"1px"}
             py={"2"}
           >
