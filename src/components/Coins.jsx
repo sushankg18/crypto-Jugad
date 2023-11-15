@@ -8,8 +8,6 @@ import {
   HStack,
   VStack,
   Center,
-  RadioGroup,
-  Radio,
 } from "@chakra-ui/react";
 
 const Coins = () => {

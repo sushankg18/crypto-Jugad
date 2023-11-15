@@ -1,14 +1,13 @@
 import React from "react";
 import { HStack, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo2.png";
+import Logo from "../assets/CryptoJugad.png";
 
 const Header = () => {
   const hoverEffect = {
     color: "white",
-    borderRadius: "3px",
     transition: ".2s",
-    borderTop: "2px solid white",
+    border: "1px solid white",
   };
   return (
     <HStack
@@ -19,20 +18,22 @@ const Header = () => {
       fontSize={"large"}
       color={"white"}
       justifyContent={"space-between"}
-      bgColor={"#37C38B"}
+      bgColor={"#000"}
       textAlign={"start"}
     >
       <Link to={"/"}>
-        <Image src={Logo} w={"56"} />
+        <Image src={Logo} w={"48"} borderRadius={'5px'} />
       </Link>
       <HStack gap={['','','8',"20"]} fontWeight={"bold"} display={["none", "flex"]}>
         <Link to={"/"}>
           <Text
             _hover={hoverEffect}
             fontSize={["none", "", "1rem", "1.1rem"]}
-            color={"#005827"}
+            color={"#fff"}
+            borderRadius={'10px'}
             letterSpacing={"1px"}
             py={"2"}
+            px={'4'}
           >
             Home
           </Text>
@@ -41,7 +42,9 @@ const Header = () => {
           <Text
             _hover={hoverEffect}
             fontSize={["none", "", "1rem", "1.1rem"]}
-            color={"black"}
+            color={"fff"}
+            px={'4'}
+            borderRadius={'10px'}
             py={"2"}
             letterSpacing={"1px"}
           >
@@ -52,24 +55,17 @@ const Header = () => {
           <Text
             _hover={hoverEffect}
             fontSize={["none", "", "1rem", "1.1rem"]}
-            color={"black"}
+            borderRadius={'10px'}
+            color={"fff"}
             py={"2"}
+            objectFit={'contain'}
+            px={'4'}
             letterSpacing={"1px"}
           >
             Exchanges
           </Text>
         </Link>
-        <Link to={"/coin/:id"}>
-          <Text
-            _hover={hoverEffect}
-            fontSize={["none", "", "1rem", "1.1rem"]}
-            color={"black"}
-            py={"2"}
-            letterSpacing={"1px"}
-          >
-            Coins Details
-          </Text>
-        </Link>
+       
       </HStack>
     </HStack>
   );

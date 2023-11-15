@@ -10,7 +10,7 @@ const ErrorComponent = ({ message }) => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Heading>{message}</Heading>
+      <Heading fontSize={['xl','xl']} textAlign={'center'}>{message}</Heading>
     </Box>
   );
 };
