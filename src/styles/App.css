@@ -27,11 +27,15 @@
 
 /* Handle */
 .buttons-div::-webkit-scrollbar-thumb {
-    background:dimgray;
+    background: dimgray;
     border-radius: 5px;
 }
 
 /* Handle on hover */
 .buttons-div::-webkit-scrollbar-thumb:hover {
     background: rgb(84, 83, 83);
+}
+
+.logo-img::selection {
+    user-select: none;
 }

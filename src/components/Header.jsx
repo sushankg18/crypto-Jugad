@@ -16,9 +16,7 @@ import {
 
 const Header = () => {
   const hoverEffect = {
-    color: "white",
-    transition: ".2s",
-    borderBottom: "2px solid white",
+    borderBottom: "1px solid white",
   };
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -47,6 +45,7 @@ const Header = () => {
         <Link to={"/"}>
           <div style={{ position: "relative", display: "inline-block" }}>
             <Image
+              className="logo-img"
               src={Logo}
               w={["40", "48"]}
               filter={"grayscale(1)"}
@@ -54,7 +53,7 @@ const Header = () => {
             />
             <Text
               _hover={{ color: "white" }}
-              fontSize={["none", ".8rem", "1rem", "1.2rem"]}
+              fontSize={["none", ".8rem", "1rem", "1.1rem"]}
               color={"#fff"}
               fontWeight={"semibold"}
               letterSpacing={"1px"}
@@ -97,7 +96,7 @@ const Header = () => {
 
               <Text
                 _hover={hoverEffect}
-                fontSize={["none", ".8rem", "1rem", "1.2rem"]}
+                fontSize={["none", ".8rem", "1rem", "1.1rem"]}
                 color={"#fff"}
                 fontWeight={"semibold"}
                 letterSpacing={"1px"}
@@ -114,7 +113,7 @@ const Header = () => {
               <FaCoins />
               <Text
                 _hover={hoverEffect}
-                fontSize={["none", ".8rem", "1rem", "1.2rem"]}
+                fontSize={["none", ".8rem", "1rem", "1.1rem"]}
                 color={"fff"}
                 px={"4"}
                 py={"2"}
@@ -132,7 +131,7 @@ const Header = () => {
               <Text
                 _hover={hoverEffect}
                 fontWeight={"semibold"}
-                fontSize={["none", ".8rem", "1rem", "1.2rem"]}
+                fontSize={["none", ".8rem", "1rem", "1.1rem"]}
                 color={"fff"}
                 py={"2"}
                 objectFit={"contain"}
